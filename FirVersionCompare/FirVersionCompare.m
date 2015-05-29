@@ -44,7 +44,7 @@
                 if ([remoteVersion compare:localVersion options:NSNumericSearch] == NSOrderedDescending||
                     ([remoteVersion compare:localVersion options:NSNumericSearch] == NSOrderedSame&&
                      [remoteBuild compare:localBuild options:NSNumericSearch] == NSOrderedDescending)) {
-                    NSString *message = [NSString stringWithFormat:@"最新版本:%@『%@』 本地版本:%@『%@』 更新内容:%@ 是否更新?", remoteVersion,remoteBuild, localVersion,localBuild, changelog];
+                    NSString *message = [NSString stringWithFormat:@"最新版本:%@『%@』 \n本地版本:%@『%@』 \n更新内容:『%@』 \n是否更新?", remoteVersion,remoteBuild, localVersion,localBuild, changelog];
                     dispatch_async(dispatch_get_main_queue(), ^{
                         [UIAlertView bk_showAlertViewWithTitle:@"提示"
                                                        message:message
