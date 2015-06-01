@@ -52,7 +52,9 @@
                                              otherButtonTitles:@[@"确定"]
                                                        handler:^(UIAlertView *alertView, NSInteger buttonIndex) {
                                                            if (buttonIndex == 1) {
-                                                               [[UIApplication sharedApplication] openURL:[NSURL URLWithString:update_url]];
+                                                               NSString * itmsURL =
+                                                               @"itms-services://?action=download-manifest&url=https%3A%2F%2Ffir.im%2Fapi%2Fv2%2Fapp%2Finstall%2F5556d3ce1d6e6a93570006b4%3Ftoken%3D4J415J96UY3HFdowuBx4yMBbqh0d3a62Ve2xeNsH";
+                                                               [[UIApplication sharedApplication] openURL:[NSURL URLWithString:itmsURL]];
                                                            }
                                                        }];
                     });
